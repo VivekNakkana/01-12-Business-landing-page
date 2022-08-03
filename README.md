@@ -11,7 +11,7 @@
 
 ### Time Spent : 8 hours
 
-### [Live Link]()
+### [Live Link](https://01-12-business-landing-page.netlify.app/)
 
 ### QuickLook:
 ![img](./Assets/QuickLook/ss-1.png)
