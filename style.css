@@ -7,16 +7,17 @@
 header{
     background-color: #636C79;
     color: #ffffff;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 4rem;
 }
 .navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
-.list ul{
+.list{
     margin-right: 4rem;
     list-style-type: none;
     display: flex;
@@ -47,20 +48,62 @@ header{
     transition: 300ms ease-in-out;
 }
 .logo img{
-    width: 70%;
+    width: 140px;
     margin-left: 4rem;
 }
+.menu{
+    cursor: pointer;
+    font-size: 26px;
+    margin-right: 4rem;
+    display: none;
+}
+@media (max-width:1000px){
+    .list{
+        gap: 2rem;
+    }
+}
+@media (max-width:900px){
+    .menu{
+        display: block;
+    }
+    .list{
+        display: none;
+        position: absolute;
+        margin-right: 0rem;
+        flex-direction: column;
+        gap: .5rem;
+        margin-top: 2.4rem;
+        width: 100vw;
+        right: 0%;
+        text-align: center;
+        background-color: #636C79;
+        padding-bottom: 1rem;
+    }
+    .list li{
+        padding-block: .5rem;
+    }
+    .list li:hover{
+        background-color: #6d7785;
+    }
+    .nav-active{
+        display: block;
+    }
+}
+
+/* HERO SECTION */
 .banner{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
-    gap: 8rem;
+    gap: 5rem;
+    margin-inline: 2rem; 
+    margin-top: 3rem;
 }
 
 .first-img{
-    margin-left: 8rem;
-    margin-top: 2rem;
+    /* margin-left: 8rem; */
+   
     width: 26rem;
     height: 460px;
     overflow: hidden;
@@ -70,6 +113,9 @@ header{
    width: 100%;
    height: 100%;
    object-fit: cover;
+}
+.banner-text{
+    width: 500px;
 }
 .banner h1{
     font-size: 60px;
@@ -115,6 +161,37 @@ header{
     transition: 300ms ease-in-out;
     background-color:#636C79;
 }
+@media (max-width:930px){
+    .banner{
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .banner-text{
+        text-align: center;
+    }
+    .banner h1{
+        font-size: 50px;
+    }
+}
+@media (max-width:520px){
+    .banner-text{
+        width: auto;
+    }
+    .email i, .email input{
+        display: none;
+    }
+    .email{
+        padding: 0px;
+        background-color: transparent;
+    }
+    .email-btn{
+        margin: 0px;
+        margin-inline: auto;
+        float: none;
+        border: 2px #ffffff solid;
+    }
+}
+/* CONNECT SECTION */
 .connect .heading{
     text-align: center;
     margin-top: 3rem;
@@ -144,8 +221,18 @@ header{
     justify-content: center;
 }
 .img-2 img{
-    width: 65%;
+    width: max(400px,55%);
 }
+@media (max-width:720px){
+    .num{
+        gap: 2rem;
+    }
+    .num h1{
+        font-size: 26px;
+    }
+}
+
+/* SECTION -1 EASY CARE */
 .care h1{
     text-align: center;
     margin-top: 3rem;
@@ -155,22 +242,19 @@ header{
 .care .sec-1{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5rem;
     align-items: center;
+    margin-inline: 2rem;
 }
 .care .sec-12{
-    width: 35vw;
-    height: 70vh;
+    width: max(400px,46%);
     overflow: hidden;
-    margin-right: 5rem;
 }
 .care .sec-12 img{
     width: 100%;
     height: 100%;
     object-fit:cover;
-}
-.sec-11{
-    margin-left: 10rem;
 }
 .sec-11 h2{
     font-size: 38px;
@@ -181,19 +265,34 @@ header{
     font-family: 'Montserrat';
     color: #000000be;
 }
+@media (max-width:480px){
+    .care h1{
+        font-size: 42px;
+    } 
+}
+@media (max-width:1000px){
+    .care .sec-1{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+
+/* SECTION-2 Digital Marketing */
 .sec-2{
     display: flex;
     flex-direction: row;
-    gap: 6rem;
+    gap: 5rem;
     align-items: center;
+    justify-content: center;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
 .sec-21{
-    width: 30vw;
-    height: 85vh;
+    width: max(300px,32%);
+    /* height: 85vh; */
     overflow: hidden;
-    margin-left:8rem ;
+    /* margin-left:8rem ; */
 }
 .sec-21 img{
     width: 100%;
@@ -201,7 +300,7 @@ header{
     object-fit: cover;
 }
 .sec-22 h2{
-    font-size: 40px;
+    font-size: 38px;
 }
 .sec-22 p{
     font-family: 'Montserrat';
@@ -209,16 +308,31 @@ header{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+@media (max-width:880px){
+    .sec-2{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width:480px){
+    .sec-22 h2{
+        font-size: 32px;
+    } 
+}
+
+/* SECTION-3  */
 .sec-3{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10rem;
+    gap: 5rem;
     align-items: center;
+    margin-inline: 2rem;
 }
 .sec-32{
-    width: 36vw;
-    height: 70vh;
+    width: max(400px,36vw);
+    height: 60vh;
     overflow: hidden;
 }
 .sec-32 img{
@@ -236,6 +350,18 @@ header{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+@media (max-width:1000px){
+    .sec-3{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .sec-31 h2{
+        font-size: 32px;
+    }
+}
+
+/* SECTION-4 */
 .sec-4{
     display: flex;
     flex-direction: row;
@@ -251,6 +377,16 @@ header{
 .sec-4 p{
     font-family: 'Montserrat';
     color: #000000be;
+}
+@media (max-width:820px){
+    .sec-4{
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .sec-41 h2{
+        font-size: 34px;
+    }
 }
 .sec-5{
     display: flex;
@@ -273,6 +409,11 @@ header{
     font-size: 14px;
     color: #000000be;
 }
+@media (max-width:940px){
+    .sec-5{
+        flex-direction: column;
+    }
+}
 .seemore-btn{
     margin-top: 4rem;
     margin-bottom:4rem;
@@ -283,24 +424,22 @@ footer{
     background-color: #10181D;
     color: #ffffffd4;
     padding-top: 3rem;
-    padding-bottom: 7rem;
+    padding-bottom: 4rem;
 }
 .footer-top{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+    margin-inline: 6rem;
 }
 .footer-top img{
-    width:10%;
-    margin-left: 6rem;
-}
+    width:max(80px,10%);
+}    
 .icons{
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    margin-right: 6rem;
     list-style-type: none;
 }
 .fa-brands{
@@ -328,6 +467,8 @@ footer{
     gap: 4rem;
     align-items: center;
     margin-top: 3rem;
+    margin-inline: 2rem;
+    flex-wrap: wrap;
 }
 .footer-list{
     list-style-type: none;
@@ -338,7 +479,15 @@ footer{
 }
 .footer-bottom li{
     color:#ffffffc4;
-    line-height: 40px;
     font-size: 13px;
+    padding-block: .5rem;
     font-family: 'Montserrat';
+}
+@media (max-width:400px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: center;
+        margin-inline:auto ;
+        gap: 1rem;
+    }
 }
